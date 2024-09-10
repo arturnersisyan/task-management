@@ -1,15 +1,11 @@
-import { timeStamp } from 'console';
+import { PriorityType, StatusType } from 'src/types/taskColumnTypes';
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
-  ManyToOne,
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-
-export type PriorityType = 'Low' | 'Medium' | 'High';
-export type StatusType = 'Pending' | 'In Progress' | 'Completed';
 
 @Entity()
 export class Task {
@@ -34,12 +30,12 @@ export class Task {
   @Column({
     type: 'enum',
     enum: ['Pending', 'In Progress', 'Completed'],
-    default: 'Pending'
+    default: 'Pending',
   })
   status: StatusType;
 
   @Column()
-  assigned_member: string // ManyToOne User model
+  assignedMember: string; // ManyToOne User model
 
   @CreateDateColumn()
   createdAt: Date;
