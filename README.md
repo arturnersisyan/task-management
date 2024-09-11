@@ -25,7 +25,7 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
+[Client Side for this app](https://github.com/arturnersisyan/task-management-front)
 ## Installation
 
 ```bash
