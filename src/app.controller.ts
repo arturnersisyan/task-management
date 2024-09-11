@@ -11,7 +11,9 @@ import {
 import { AppService } from './app.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Task API')
 @Controller('tasks')
 export class AppController {
   constructor(private readonly appService: AppService) {}
